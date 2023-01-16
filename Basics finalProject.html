@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basicsProject</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      h3 {
+        font-weight: lighter;
+        text-align: end;
+
+      }
+
+      img {
+        height: 200px;
+        width: 200px;
+        box-shadow: 5px 5px 0;
+      }
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 100px 100px;
+        padding: 100px 100px;
+      }
+
+      figure {
+        display: inline-block;
+        margin-inline: 200px;
+      }
+
+      figcaption {
+        text-align: center;
+        font-size: larger;
+      }
+
+      p {
+        text-align: center;
+        font-size: 15px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 30px;
+        font-size: 18px;
+        color: black;
+        background: transparent;
+        border: 20px auto;
+        border-color: black;
+        border-radius: 45px;
+        box-shadow: 5px 5px 10px lightsalmon;
+        transition: all 200ms ease;
+      }
+
+      button:hover {
+        background: lightsalmon;
+        color: white;
+        cursor: pointer;
+
+      }
+
+      a {
+        color: lightsalmon;
+      }
+      body {
+        background-image: linear-gradient(to right, lightsalmon 25%, white 50%);,
+        linear-gradient(to bottom, lightsalmon 25%, white 50%);
+
+        background-size: 20px 20px 10px 10px;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      .image {
+        flex-basis: 40%;
+      }
+      .text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cooking Course</h1>
+    <h2>from 0 to<em> HERO</em></h2>
+    <div class="container">
+      <figure>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/052/701/original/bad_plating_idea.jpg?1668104081"
+          width="150px"
+          height="150px"
+        />
+        <figcaption>Are you this type of cook?</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/052/702/original/good_plating_idea.jpg?1668104122"
+          width="150px"
+          height="150px"
+        />
+        <figcaption>
+          <b><em>But you would like to be this type of cook?</em></b>
+        </figcaption>
+      </figure>
+    </div>
+    <hr />
+
+    <h3>
+      Hi! My name is <b><em>Diana</em></b> and I teach cooking lessons for small
+      groups(3-5 people).<br />
+      No prior experience necessary. <br />
+      Only pre-requisite: <b><em>LOVE</em></b> for <b><em>FOOD!</em></b
+      ><br />
+      If that sounds like you come join me! <br />
+      Guaranteed: tasty dishes and good laughter.
+    </h3>
+
+    <button>Join now</button>
+
+    <p>Call to reserve a spot <a href="tel:+4433378903">+44 333 78 903</a></p>
+
+    <script>
+      function join() {
+        let name = prompt("What is your name?");
+        let age = prompt("What is your age?");
+
+        if (age >= 18) {
+          alert(
+            "🎉" + " Yaaay " + name + " welcome to our professional cooks fam!"
+          );
+        } else {
+          alert("We are sorry" + "😭" + name + " you cannot join at this time");
+        }
+      }
+      let joinButton = document.querySelector("button");
+      joinButton.addEventListener("click", join);
+    </script>
+  </body>
+</html>
